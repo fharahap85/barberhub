@@ -58,3 +58,9 @@ YANG DIBUAT:
 - [file2] → [apa yg dibuat]
 CATATAN: [issue/blocker untuk sesi berikutnya]
 ```
+
+### Cross-Device
+- `.opencode/plans/` di-track git — commit & push setelah sesi selesai
+- Di device lain: `git pull` — file plans terbawa semua
+- Mulai sesi baru: lihat file `.opencode/plans/*.md` untuk status terakhir
+- **Jangan commit ulang file plans yang tidak berubah**

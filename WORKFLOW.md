@@ -38,6 +38,71 @@ docs: <dokumentasi>
 
 ---
 
+## 0b. Task Sizing (AI Session)
+
+Agar work selesai dalam 1 sesi AI tanpa overflow context window:
+
+### Batas 1 Issue
+- **1 issue = 1 task dari TASK_BREAKDOWN.md** (misal: `TASK-101 Register API`)
+- Jika task masih terlalu besar, **pecah jadi subtask** dengan checklist di body issue
+- Jangan gabung backend + frontend dalam 1 issue — buat issue terpisah
+
+### Estimasi
+- Setiap issue harus bisa dikerjakan dalam **1–3 jam** dengan AI
+- Jika estimasi > 3 jam → pecah lagi
+
+### Patokan Aman
+```
+1 task kecil  (1 API + 1 halaman)   → 1 issue
+1 task sedang (CRUD + daftar)        → maksimal 2 issue (BE + FE)
+1 task besar  (booking engine)        → pecah per endpoint
+```
+
+### Checklist Issue yang Siap AI
+- [ ] Body issue berisi acceptance criteria konkret
+- [ ] Referensi file/link tersedia
+- [ ] Dapat dikerjakan < 3 jam AI
+
+---
+
+## 0c. Cara Kerja dengan AI
+
+### Mulai Sesi
+Kirim file task langsung — AI akan baca dan kerjakan:
+```
+@.opencode/tasks/TASK-xxx.md
+```
+Atau dengan perintah eksplisit:
+```
+@opencode baca AGENTS.md + .opencode/tasks/TASK-xxx.md lalu kerjakan. WAJIB baca CODING_CONVENTION.md
+```
+
+### Aturan 1 Sesi
+- **1 sesi AI = 1 task** dari `.opencode/tasks/TASK-xxx.md` — jangan gabung
+- Baca `CODING_CONVENTION.md` di awal sesi
+- Baca file referensi yang relevan saja (lihat File Index di AGENTS.md)
+- `DEFINITION_OF_DONE.md` wajib dicek sebelum bilang selesai
+
+### Session Save Protocol
+Setiap selesai task, tulis file `.opencode/plans/<task-id>.md`:
+```md
+# TASK-xxx — [nama task]
+STATUS: done | partial | blocked
+DURASI: [jam]
+YANG DIBUAT:
+- [file1] → [apa yg dibuat]
+- [file2] → [apa yg dibuat]
+CATATAN: [issue/blocker untuk sesi berikutnya]
+```
+
+### Cross-Device
+- `.opencode/plans/` di-track git — commit & push setelah sesi selesai
+- Di device lain: `git pull` — file plans terbawa semua
+- Mulai sesi baru: lihat file `.opencode/plans/*.md` untuk status terakhir
+- **Jangan commit ulang file plans yang tidak berubah**
+
+---
+
 ## 1. Git Branching & Merge
 
 1. **Ambil issue → buat branch** dari `master`

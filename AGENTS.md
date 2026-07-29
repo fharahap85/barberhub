@@ -37,8 +37,12 @@ BarberHub: SaaS multi-tenant booking barbershop. Laravel 12 + React + TypeScript
 6. **Baca CODING_CONVENTION.md**
 7. **Baca file referensi** yang disebut di task file
 8. **Kerjakan** sesuai isi task
-9. **Simpan status** — ke `.opencode/plans/<task-id>.md` setelah selesai
-10. **Tanya** — "Lanjut task lain? (y/n)"
+9. **Jika task terlalu besar** (melebihi konteks / > 30 menit):
+   - Tanya user: "Task ini cukup besar. Lanjutkan atau simpan dulu? (lanjut/simpan)"
+   - Jika simpan → tulis status `partial`, catat progress, selesai
+   - User juga bisa bilang "stop" kapan saja → langsung simpan status partial
+10. **Simpan status** — ke `.opencode/plans/<task-id>.md` setelah selesai
+11. **Tanya** — "Lanjut task lain? (y/n)"
     - y → ulangi dari langkah 3
     - n → "Jangan lupa commit & push ya." (selesai)
 

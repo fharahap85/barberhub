@@ -33,17 +33,7 @@ BarberHub: SaaS multi-tenant booking barbershop. Laravel 12 + React + TypeScript
 
 ## Template Perintah
 ```
-@opencode
-TASK: [nama] (TASK-xxx)
-DESKRIPSI: [1-2 kalimat]
-REFERENSI: [file.md → section]
-ACCEPTANCE:
-- [ ] kriteria
-WAJIB:
-1. Baca CODING_CONVENTION.md
-2. Baca file referensi
-3. Kerjakan tanpa gabung task lain
-4. Lint/test wajib lolos
+@opencode baca AGENTS.md + .opencode/tasks/TASK-xxx.md lalu kerjakan. WAJIB baca CODING_CONVENTION.md
 ```
 
 ## Session Save Protocol

@@ -34,17 +34,19 @@ BarberHub: SaaS multi-tenant booking barbershop. Laravel 12 + React + TypeScript
    - Jika semua `done` atau tidak ada plans → "Task mana yang mau dikerjakan?"
 4. **Tunggu jawaban** — user jawab (y / nomor task / n)
 5. **Baca task file** — `.opencode/tasks/TASK-xxx.md`
-6. **Baca CODING_CONVENTION.md**
-7. **Baca file referensi** yang disebut di task file
-8. **Kerjakan** sesuai isi task
-9. **Jika task terlalu besar** (melebihi konteks / > 30 menit):
-   - Tanya user: "Task ini cukup besar. Lanjutkan atau simpan dulu? (lanjut/simpan)"
-   - Jika simpan → tulis status `partial`, catat progress, selesai
-   - User juga bisa bilang "stop" kapan saja → langsung simpan status partial
+6. **Evaluasi ukuran** — jika task terlalu besar (> 1 API + 1 halaman), tanya user:
+   - "Task ini cukup besar. Mau dipecah? (y/n)"
+   - Jika y → user tentukan sendiri cara pecahnya, lalu kerjakan bagian pertama
+   - Jika n → lanjut kerjakan penuh (resiko partial/stop di tengah)
+7. **Baca CODING_CONVENTION.md**
+8. **Baca file referensi** yang disebut di task file
+9. **Kerjakan** sesuai isi task
 10. **Simpan status** — ke `.opencode/plans/<task-id>.md` setelah selesai
 11. **Tanya** — "Lanjut task lain? (y/n)"
     - y → ulangi dari langkah 3
     - n → "Jangan lupa commit & push ya." (selesai)
+
+> User bisa bilang "stop" kapan saja → AI simpan status `partial` dan catat progress untuk dilanjut nanti.
 
 ## Aturan Kerja
 1. 1 sesi AI = 1 task dari `TASK_BREAKDOWN.md` (jangan gabung)

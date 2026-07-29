@@ -29,13 +29,18 @@ BarberHub: SaaS multi-tenant booking barbershop. Laravel 12 + React + TypeScript
 
 1. **Baca konteks** — file ini (AGENTS.md)
 2. **Cek status** — list `.opencode/plans/*.md` untuk lihat task terakhir & statusnya
-3. **Tanya user** — "Task mana yang mau dikerjakan?"
-4. **Tunggu jawaban** — user jawab nomor task (misal: "TASK-403")
+3. **Tanya user**:
+   - Jika ada task `partial`/`blocked` → "Ada task yang belum selesai: [TASK-xxx]. Lanjutkan? (y/n)"
+   - Jika semua `done` atau tidak ada plans → "Task mana yang mau dikerjakan?"
+4. **Tunggu jawaban** — user jawab (y / nomor task / n)
 5. **Baca task file** — `.opencode/tasks/TASK-xxx.md`
 6. **Baca CODING_CONVENTION.md**
 7. **Baca file referensi** yang disebut di task file
 8. **Kerjakan** sesuai isi task
 9. **Simpan status** — ke `.opencode/plans/<task-id>.md` setelah selesai
+10. **Tanya** — "Lanjut task lain? (y/n)"
+    - y → ulangi dari langkah 3
+    - n → "Jangan lupa commit & push ya." (selesai)
 
 ## Aturan Kerja
 1. 1 sesi AI = 1 task dari `TASK_BREAKDOWN.md` (jangan gabung)

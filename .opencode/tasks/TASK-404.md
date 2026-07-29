@@ -1,4 +1,5 @@
-KERJAKAN: # TASK-404: Booking UI (4d) — Critical
+KERJAKAN: 
+# TASK-404: Booking UI (4d) — Critical
 Multi-step wizard: pilih service → pilih barber → pilih tanggal → pilih slot → konfirmasi.
 Booking success page, history page, cancel action.
 

@@ -1,4 +1,5 @@
-KERJAKAN: # TASK-501: Owner Booking Dashboard API (2d)
+KERJAKAN: 
+# TASK-501: Owner Booking Dashboard API (2d)
 `GET /bookings?status=&date=` — list booking milik tenant.
 `PATCH /bookings/{id}/status` — confirm, complete, cancel.
 `GET /dashboard` — summary: today_booking, pending, completed, revenue.

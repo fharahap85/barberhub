@@ -1,4 +1,4 @@
-# TASK-401: Shop Discovery API (2d)
+KERJAKAN: # TASK-401: Shop Discovery API (2d)
 `GET /barbershops` — list, search (`?search=`), location filter.
 `GET /barbershops/{id}` — detail with barbers, services, operating hours.
 

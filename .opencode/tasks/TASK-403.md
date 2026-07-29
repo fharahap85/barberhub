@@ -1,4 +1,4 @@
-# TASK-403: Booking API (4d) — Critical
+KERJAKAN: # TASK-403: Booking API (4d) — Critical
 `POST /bookings` — validasi: tenant active, barber available, dalam jam kerja, no double booking.
 `GET /bookings/my` — history customer. `PATCH /bookings/{id}/status` — cancel (sebelum waktu).
 

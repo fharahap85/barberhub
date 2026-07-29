@@ -18,6 +18,7 @@ BarberHub: SaaS multi-tenant booking barbershop. Laravel 12 + React + TypeScript
 | `WORKFLOW.md` | Git branching, deploy, testing, task sizing |
 | `CODING_CONVENTION.md` | Naming, structure, API response format, testing style |
 | `DEFINITION_OF_DONE.md` | 9 kriteria selesai — **wajib dicek sebelum PR** |
+| `.opencode/tasks/TASK-xxx.md` | Prompt per task — kirim file ini langsung ke AI untuk dikerjakan |
 
 ## Tech Stack
 - Backend: Laravel 12, PHP 8.4, Sanctum, MySQL 8
@@ -31,7 +32,14 @@ BarberHub: SaaS multi-tenant booking barbershop. Laravel 12 + React + TypeScript
 4. Setelah selesai, simpan status ke `.opencode/plans/<task-id>.md`
 5. `Definition of Done` wajib dicek sebelum bilang selesai
 
-## Template Perintah
+## Cara Perintah
+Cukup kirim file task langsung — AI akan baca dan kerjakan.
+
+```
+@.opencode/tasks/TASK-xxx.md
+```
+
+Atau bisa juga:
 ```
 @opencode baca AGENTS.md + .opencode/tasks/TASK-xxx.md lalu kerjakan. WAJIB baca CODING_CONVENTION.md
 ```
